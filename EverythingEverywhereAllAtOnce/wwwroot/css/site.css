@@ -1,0 +1,50 @@
+﻿html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.CodeBackground {
+    margin-top: 20px;
+    background-color: #2d2d30;
+    width: 800px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.CodeText {
+    padding: 10px;
+    color: lightblue;
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Cascadia Code', sans-serif;
+}
+
+.CodeType {
+    padding: 10px;
+    color: rgb(114,198,177);
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Cascadia Code', sans-serif;
+}
+
+.CodeFunction {
+    padding: 10px;
+    color: yellow;
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Cascadia Code', sans-serif;
+}
