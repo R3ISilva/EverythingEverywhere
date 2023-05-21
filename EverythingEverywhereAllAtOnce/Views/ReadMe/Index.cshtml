@@ -1,13 +1,40 @@
-﻿@{
+﻿<link href="~/css/Notes.css" rel="stylesheet" />
+
+@{
     ViewData["Title"] = "ReadMe Title";
 }
 
-
-<div class="CodeBackground">
-    <span class="CodeText">public class</span>
-    <span class="CodeType">Readme : Ideas<br></span>
-    <span class="CodeText">{<br></span>
+<div class="">
+	<div class="card">
+		<div class="card-image">
+			<h2 class="card-heading">
+				Get started
+				<small>Let us create your account</small>
+			</h2>
+		</div>
+		<form class="card-form">
+			<div class="input">
+				<input type="text" class="input-field" value="Alexander Parkinson" required />
+				<label class="input-label">Full name</label>
+			</div>
+			<div class="input">
+				<input type="text" class="input-field" value="vlockn@gmail.com" required />
+				<label class="input-label">Email</label>
+			</div>
+			<div class="input">
+				<input type="password" class="input-field" required />
+				<label class="input-label">Password</label>
+			</div>
+			<div class="action">
+				<button class="action-button">Get started</button>
+			</div>
+		</form>
+		<div class="card-info">
+			<p>By signing up you are agreeing to our <a href="#">Terms and Conditions</a></p>
+		</div>
+	</div>
 </div>
+
 <div class="CodeBackground">
     <div class="CodeText">
         <pre> 
@@ -18,7 +45,7 @@ namespace EverythingEverywhereAllAtOnce
 
 public class Readme : Ideas
 {
-    public ReadMe()
+    public ReadMe() Ctes
     {
         int visitor number = PLACEHOLDER;
 
