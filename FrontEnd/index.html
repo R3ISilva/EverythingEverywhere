@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .image-box {
+            width: 200px;
+            height: 200px;
+            border: ;
+            background-image: url("images/printer.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        } 
+        
+        .white-text {
+            color: white;
+        }
+        
+        .yellow-text {
+            color: rgb(230, 197, 13);
+        }
+
+        .input-box {
+            width: 200px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="image-box"></div>
+    <h1 class="yellow-text">PRINT TICKET</h1>
+    <script src="index.js"></script>
+    <form>
+        <!-- Form 3 -->
+        <label for="answer3" class="white-text">Print Name:</label><br>
+        <input type="text" id="answer3" name="answer3" class="input-box"><br><br>
+        
+        <!-- Form 4 -->
+        <label for="answer4" class="white-text">Weight:</label><br>
+        <input type="text" id="answer4" name="answer4" class="input-box"><br><br>
+
+        <!-- Form 1 -->
+        <label for="answerSelect" class="white-text">Filament:</label><br>
+        <select id="answerSelect" class="input-box">
+          <option value=""></option>
+          <option value="option1">Filament 1</option>
+          <option value="option2">Filament 2</option>
+          <option value="option3">Filament 3</option>
+        </select><br>
+        
+        <!-- Form 2 -->
+        <label for="answer2Select" class="white-text">Who Printed:</label><br>
+        <select id="answer2Select" class="input-box">
+          <option value=""></option>
+          <option value="option1">Diogo</option>
+          <option value="option2">Edgar</option>
+          <option value="option3">João</option>
+        </select><br>
+        <br>
+        <input type="file" onchange="handleFileUpload(event)"><br>
+        <input type="file" onchange="handleFileUpload(event)"><br>
+        <br>
+        
+        <button type="button" onclick="submitForms()">Submit</button>
+    </form>
+</body>
+</html>
