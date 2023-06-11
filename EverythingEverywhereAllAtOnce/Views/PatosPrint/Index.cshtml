@@ -1,69 +1,26 @@
-﻿<link href="~/css/Notes.css" rel="stylesheet" />
-<link href="~/css/Dropdown.css" rel="stylesheet" />
-<link rel="stylesheet/less" type="text/css" href="styles.less" />
+﻿<link rel="stylesheet/less" type="text/css" href="styles.less" />
 <script src="https://cdn.jsdelivr.net/npm/less"></script>
 
 @{
-    ViewData["Title"] = "ReadMe Title";
+    ViewData["Title"] = "PatosPrint";
 }
-
-<div class="">
-	<div class="card">
-		<div class="card-image">
-			<h2 class="card-heading">
-				Print Ticket
-				<small>add a new amazing print</small>
-			</h2>
-		</div>
-		<form class="card-form">
-			<div class="input">
-				<input type="text" class="input-field" value="Alexander Parkinson" required />
-				<label class="input-label">User</label>
-			</div>
-			<div class="input">
-				<input type="text" class="input-field" value="Alexander Parkinson" required />
-				<label class="input-label">Full name</label>
-			</div>
-			<div class="input">
-				<input type="text" class="input-field" value="vlockn@gmail.com" required />
-				<label class="input-label">Email</label>
-			</div>
-			<div class="input">
-				<input type="password" class="input-field" required />
-				<label class="input-label">Password</label>
-			</div>
-			<div class="action">
-				<button class="action-button">Get started</button>
-			</div>
-		</form>
-		<div class="card-info">
-			<p>Your print represents X% of total prints!</p>
-		</div>
-	</div>
-</div>
-
-<div class="dropdown">
-  <input type="checkbox" id="dropdown">
-
-  <label class="dropdown__face" for="dropdown">
-    <div class="dropdown__text">Dropdown</div>
-
-    <div class="dropdown__arrow"></div>
-  </label>
-
-  <ul class="dropdown__items">
-    <li>🙂</li>
-    <li>😺</li>
-    <li>😽</li>
-    <li>😎</li>
-    <li>🤗</li>
-  </ul>
-</div>
-
-<svg>
-  <filter id="goo">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-    <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-    <feBlend in="SourceGraphic" in2="goo" />
-  </filter>
-</svg>
+<h1>Print Ticket</h1>
+<form asp-controller="PatosPrint" asp-action="Index" method="post">
+    <div class="form-group">
+        <label for="input1">Input 1:</label>
+        <input class="form-control" type="text" id="input1" name="Input1" />
+    </div>
+    <div class="form-group">
+        <label for="input2">Input 2:</label>
+        <input class="form-control" type="text" id="input2" name="Input2" />
+    </div>
+    <div class="form-group">
+        <label for="input3">Input 3:</label>
+        <input class="form-control" type="text" id="input3" name="Input3" />
+    </div>
+    <div class="form-group">
+        <label for="input4">Input 4:</label>
+        <input class="form-control" type="text" id="input4" name="Input4" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

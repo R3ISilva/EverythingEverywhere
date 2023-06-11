@@ -8,7 +8,7 @@ public class PatosPrintController : Controller
 {
 	public PatosPrintController()
 	{
-
+		
 	}
 
 	public IActionResult Index()
