@@ -48,3 +48,7 @@ body {
     text-align: justify;
     font-family: 'Cascadia Code', sans-serif;
 }
+
+.background {
+    background-color: rgb(23, 10, 46);
+}

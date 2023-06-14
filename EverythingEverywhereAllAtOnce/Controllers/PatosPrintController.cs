@@ -15,5 +15,10 @@ public class PatosPrintController : Controller
 	{
 		return View();
 	}
+
+	public IActionResult PrintTicket()
+	{
+		return View();
+	}
 }
 
