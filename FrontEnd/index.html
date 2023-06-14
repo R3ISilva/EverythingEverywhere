@@ -2,15 +2,44 @@
 <html lang="en">
 <head>
     <style>
-        .image-box {
-            width: 200px;
-            height: 200px;
-            border: ;
-            background-image: url("images/printer.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        } 
+        .navbar {
+            background-color: #56566d;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        .navbar li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px;
+        }
+        
+        .navbar li a img {
+            width: 40px;
+            height: 40px;
+            margin-right: 5px;
+        }
+
+        .navbar li a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
         
         .white-text {
             color: white;
@@ -18,10 +47,30 @@
         
         .yellow-text {
             color: rgb(230, 197, 13);
+            margin-right: 205px;
         }
 
         .input-box {
-            width: 200px;
+            width: 300px; 
+            height: 30px; 
+            font-size: 16px; 
+        }
+        
+        .form-container {
+            width: 50%;
+            margin-top: 20px;
+            margin-left: auto; /* Add this line to move the form to the right side */
+}
+
+        .image-box {
+            width: 10%;
+            height: 200px;
+            background-image: url("images/printer.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-bottom: 20px;
+            margin-right: 250px;
         }
     </style>
     <meta charset="UTF-8">
@@ -31,41 +80,63 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="image-box"></div>
-    <h1 class="yellow-text">PRINT TICKET</h1>
-    <script src="index.js"></script>
-    <form>
-        <!-- Form 3 -->
-        <label for="answer3" class="white-text">Print Name:</label><br>
-        <input type="text" id="answer3" name="answer3" class="input-box"><br><br>
-        
-        <!-- Form 4 -->
-        <label for="answer4" class="white-text">Weight:</label><br>
-        <input type="text" id="answer4" name="answer4" class="input-box"><br><br>
 
-        <!-- Form 1 -->
-        <label for="answerSelect" class="white-text">Filament:</label><br>
-        <select id="answerSelect" class="input-box">
-          <option value=""></option>
-          <option value="option1">Filament 1</option>
-          <option value="option2">Filament 2</option>
-          <option value="option3">Filament 3</option>
-        </select><br>
-        
-        <!-- Form 2 -->
-        <label for="answer2Select" class="white-text">Who Printed:</label><br>
-        <select id="answer2Select" class="input-box">
-          <option value=""></option>
-          <option value="option1">Diogo</option>
-          <option value="option2">Edgar</option>
-          <option value="option3">João</option>
-        </select><br>
-        <br>
-        <input type="file" onchange="handleFileUpload(event)"><br>
-        <input type="file" onchange="handleFileUpload(event)"><br>
-        <br>
-        
-        <button type="button" onclick="submitForms()">Submit</button>
-    </form>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#"><img src="images/duck.png" alt="Home">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="image-box"></div>
+        <h1 class="yellow-text">PRINT TICKET</h1>
+    
+        <div class="form-container">
+            <div class="form-container" style="margin-left: auto;">
+  <form>
+    <!-- Form 3 -->
+    <label for="answer3" class="white-text">Print Name:</label><br>
+    <input type="text" id="answer3" name="answer3" class="input-box"><br><br>
+    
+    <!-- Form 4 -->
+    <label for="answer4" class="white-text">Weight:</label><br>
+    <input type="text" id="answer4" name="answer4" class="input-box"><br><br>
+
+    <!-- Form 1 -->
+    <label for="answerSelect" class="white-text">Filament:</label><br>
+    <select id="answerSelect" class="input-box">
+        <option value=""></option>
+        <option value="option1">Filament 1</option>
+        <option value="option2">Filament 2</option>
+        <option value="option3">Filament 3</option>
+    </select><br><br>
+    
+    <!-- Form 2 -->
+    <label for="answer2Select" class="white-text">Who Printed:</label><br>
+    <select id="answer2Select" class="input-box">
+        <option value=""></option>
+        <option value="option1">Diogo</option>
+        <option value="option2">Edgar</option>
+        <option value="option3">João</option>
+    </select><br><br>
+    
+    <input type="file" onchange="handleFileUpload(event)"><br>
+    <input type="file" onchange="handleFileUpload(event)"><br><br>
+    
+    <button type="button" onclick="submitForms()">Submit</button>    
+  </form>
+</div>
+    </div>
+
+    <script src="index.js"></script>
+    
 </body>
 </html>
+
+
+
+
+
