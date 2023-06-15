@@ -42,7 +42,7 @@ public class PatosPrintController : Controller
 
     /// <summary>
     /// Gets all users in database
-    /// </summary> 
+    /// </summary>
     /// <returns>List of all users in database</returns>
     private List<User> GetUserList()
     {
@@ -61,11 +61,12 @@ public class PatosPrintController : Controller
     /// </summary>
     /// <param name="NewPrintTicket">Filled Model from view</param>
     /// <returns>status and/or redirect</returns>
+    [HttpPost]
     private IActionResult NewPrintTicket(PrintTicketModel NewPrintTicket)
     {
         return new JsonResult(true);
         if (ModelState.IsValid)
         { }
-    }  
+    }
 }
 
