@@ -1,10 +1,14 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using Bussiness;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<Application>();
 
 var app = builder.Build();
-    
+
+
 // Conxfigure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -25,4 +29,6 @@ app.MapControllerRoute(
     pattern: "{controller=Readme}/{action=Index}/{id?}");
 
 app.Run();
+
+
 

@@ -1,4 +1,5 @@
-﻿@model PrintTicketModel
+﻿@using Bussiness;
+@model PrintTicketModel
 
 @{
     ViewData["Title"] = "PrintTicket";
@@ -49,7 +50,7 @@
             </select><br><br>
 
             <select asp-for="UserID" class="input-box">
-                @foreach (User user in Model.UserList)
+                @foreach (UserEntity user in Model.UserList)
                 {
                     <option value="@user.UserID">@user.UserName</option>
                 }
@@ -58,4 +59,4 @@
             <button type="submit">Submit</button>
         </form>
     </body>
-    
+

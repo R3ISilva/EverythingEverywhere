@@ -1,4 +1,6 @@
-﻿namespace EverythingEverywhereAllAtOnce.Models;
+﻿using Bussiness;
+
+namespace EverythingEverywhereAllAtOnce.Models;
 
 public class PrintTicketModel
 {
@@ -7,7 +9,7 @@ public class PrintTicketModel
     public string? Weight { get; set; }
     public List<Filament> FilamentList { get; set; }
     public int FilamentID { get; set; }
-    public List<User> UserList { get; set; }
+    public List<UserEntity> UserList { get; set; }
     public int UserID { get; set; }
     //missing:
     //public image
@@ -22,11 +24,9 @@ public class Filament
 
 }
 
-public class User
+public class PatosPrintUser
 {
     public int UserID { get; set; }
     public string UserName { get; set; }
-
-    //missing:
-    //public image
 }
+

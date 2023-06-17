@@ -1,13 +1,15 @@
-﻿using EverythingEverywhereAllAtOnce.Models;
+﻿using Bussiness;
+using EverythingEverywhereAllAtOnce.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EverythingEverywhereAllAtOnce.Controllers;
 
 public class PatosPrintController : Controller
 {
-    public PatosPrintController()
+    private Application Current;
+    public PatosPrintController(Application application)
     {
-
+        Current = application;
     }
 
     public IActionResult Index()
@@ -19,7 +21,7 @@ public class PatosPrintController : Controller
     {
         PrintTicketModel printTicketModel = new PrintTicketModel();
         printTicketModel.FilamentList = GetFilamentList();
-        printTicketModel.UserList = GetUserList();
+        printTicketModel.UserList = UserEntity.GetAllUsersList();
 
         return View(printTicketModel);
     }
@@ -38,22 +40,6 @@ public class PatosPrintController : Controller
         filamentList.Add(new Filament { FilamentID = 3, FilamentName = "PLA CINZENTO" });
 
         return filamentList;
-    }
-
-    /// <summary>
-    /// Gets all users in database
-    /// </summary>
-    /// <returns>List of all users in database</returns>
-    private List<User> GetUserList()
-    {
-        List<User> userList = new List<User>();
-
-        //TODO: GET USERS FROM DATABASE
-        userList.Add(new User { UserID = 1, UserName = "João" });
-        userList.Add(new User { UserID = 2, UserName = "Edgar" });
-        userList.Add(new User { UserID = 3, UserName = "Rato" });
-
-        return userList;
     }
 
     /// <summary>
